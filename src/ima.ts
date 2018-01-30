@@ -6,8 +6,8 @@ export declare namespace ima {
     getAdvertiserName(): string;
     getApiFramework(): string;
     getCompanionAds(
-      adSlowWidth: number,
-      adSlowHeight: number,
+      adSlotWidth: number,
+      adSlotHeight: number,
       settings?: CompanionAdSelectionSettings,
     ): CompanionAd[];
     getContentType(): string;
