@@ -1,23 +1,22 @@
+import { ima } from './ima';
 import loadScript from './loadScript';
-
-type GoogleImaSdk = typeof google.ima;
 
 declare global {
   interface Window {
     google: {
-      ima: GoogleImaSdk;
+      ima: typeof ima;
     };
   }
 }
 
 const imaSdkSrc = '//imasdk.googleapis.com/js/sdkloader/ima3.js';
-let pendingPromise: Promise<GoogleImaSdk> | null = null;
+let pendingPromise: Promise<typeof ima> | null = null;
 
 const promiseFinished = () => {
   pendingPromise = null;
 };
 
-const loadImaSdk = (): Promise<GoogleImaSdk> => {
+const loadImaSdk = (): Promise<typeof ima> => {
   if (window.google && window.google.ima) {
     return Promise.resolve(window.google.ima);
   }
