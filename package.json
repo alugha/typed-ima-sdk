@@ -13,14 +13,18 @@
   "bugs": {
     "url": "https://github.com/alugha/typed-ima-sdk/issues"
   },
-  "main": "dist/ima.cjs.js",
-  "jsnext:main": "dist/ima.es.js",
-  "module": "dist/ima.es.js",
+  "main": "dist/cjs/index.js",
+  "jsnext:main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "typings": "dist/typings/index.d.ts",
   "scripts": {
     "precommit": "lint-staged",
     "lint": "yarn lint:cmd src/**/*.ts",
     "lint:cmd": "tslint -p tsconfig.json -c tslint.json",
-    "compile:esm": "tsc --project tsconfig.json -d"
+    "precompile": "rimraf lib",
+    "compile": "yarn compile:esm && yarn compile:cjs",
+    "compile:esm": "tsc --project tsconfig.json",
+    "compile:cjs": "tsc --project tsconfig.cjs.json"
   },
   "lint-staged": {
     "*.ts": ["yarn lint:cmd --fix", "git add"],
