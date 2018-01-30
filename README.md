@@ -17,36 +17,36 @@ For information on the Google IMA SDK itself, please visit
 Using promises and CommonJS modules:
 
 ```typescript
-const { loadImaSdk } = require('@alugha/ima');
+const { loadImaSdk } = require("@alugha/ima");
 
 loadImaSdk()
   .then(ima => {
     // Use the IMA SDK like any other typed module
     const adDisplayContainer: ima.AdDisplayContainer = new ima.AdDisplayContainer(
-      document.getElementById('ad-container'),
+      document.getElementById("ad-container")
     );
     adDisplayContainer.initialize();
   })
   .catch(() => {
-    console.log('SDK could not be loaded. Check your ad blocker!);
+    console.log("SDK could not be loaded. Check your ad blocker!");
   });
 ```
 
 Using `async` and `await` and ES2015 modules:
 
 ```typescript
-import { loadImaSdk } from '@alugha/ima';
+import { loadImaSdk } from "@alugha/ima";
 
 const example = async () => {
   try {
     const ima = await loadImaSdk();
     // Use the IMA SDK like any other typed module
     const adDisplayContainer: ima.AdDisplayContainer = new ima.AdDisplayContainer(
-      document.getElementById('ad-container'),
+      document.getElementById("ad-container")
     );
     adDisplayContainer.initialize();
   } catch (e) {
-    console.log('SDK could not be loaded. Check your ad blocker!);
+    console.log("SDK could not be loaded. Check your ad blocker!");
   }
 };
 ```
