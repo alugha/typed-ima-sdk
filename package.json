@@ -1,6 +1,6 @@
 {
   "name": "@alugha/ima",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description":
     "A library for asynchronously loading the Google IMA SDK with static typing for the SDK",
   "license": "MIT",
@@ -19,6 +19,7 @@
   "typings": "dist/typings/index.d.ts",
   "scripts": {
     "precommit": "lint-staged",
+    "prepare": "yarn compile",
     "lint": "yarn lint:cmd src/**/*.ts",
     "lint:cmd": "tslint -p tsconfig.json -c tslint.json",
     "precompile": "rimraf lib",
