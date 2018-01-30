@@ -1,6 +1,6 @@
 {
   "name": "@alugha/ima",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "description":
     "A library for asynchronously loading the Google IMA SDK with static typing for the SDK",
   "license": "MIT",
@@ -13,10 +13,11 @@
   "bugs": {
     "url": "https://github.com/alugha/typed-ima-sdk/issues"
   },
-  "main": "dist/cjs/index.js",
-  "jsnext:main": "dist/esm/index.js",
-  "module": "dist/esm/index.js",
-  "typings": "dist/typings/index.d.ts",
+  "files": ["lib", "typings"],
+  "main": "lib/cjs/index.js",
+  "jsnext:main": "lib/esm/index.js",
+  "module": "lib/esm/index.js",
+  "typings": "lib/typings/index.d.ts",
   "scripts": {
     "precommit": "lint-staged",
     "prepare": "yarn compile",
