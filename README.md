@@ -22,7 +22,7 @@ const { loadImaSdk } = require("@alugha/ima");
 loadImaSdk()
   .then(ima => {
     // Use the IMA SDK like any other typed module
-    const adDisplayContainer: ima.AdDisplayContainer = new ima.AdDisplayContainer(
+    const adDisplayContainer: google.ima.AdDisplayContainer = new ima.AdDisplayContainer(
       document.getElementById("ad-container")
     );
     adDisplayContainer.initialize();
@@ -41,7 +41,7 @@ const example = async () => {
   try {
     const ima = await loadImaSdk();
     // Use the IMA SDK like any other typed module
-    const adDisplayContainer: ima.AdDisplayContainer = new ima.AdDisplayContainer(
+    const adDisplayContainer: google.ima.AdDisplayContainer = new ima.AdDisplayContainer(
       document.getElementById("ad-container")
     );
     adDisplayContainer.initialize();
