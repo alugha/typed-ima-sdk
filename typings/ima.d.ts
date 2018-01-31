@@ -211,7 +211,7 @@ declare namespace google {
        * Returns the Error that caused this one.
        * @returns Inner error that occurred during processing, or null if this information is unavailable. This error may either be a native error or an google.ima.AdError, a subclass of a native error. This may return null if the error that caused this one is not available.
        */
-      public getInnerError(): Error;
+      public getInnerError(): Error | null;
       /**
        * @returns The message for this error.
        */
@@ -943,7 +943,7 @@ declare namespace google {
       /**
        * @returns The content type of the Companion Ad. This may return null if the content type is not known (such as in the case of a VAST HTMLResource or IFrameResource).
        */
-      getContentType(): string;
+      getContentType(): string | null;
       /**
        * @returns Returns the height of the companion in pixels.
        */
