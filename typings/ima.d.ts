@@ -772,8 +772,11 @@ declare namespace google {
        * @returns AdsManager that manages and plays ads.
        */
       public getAdsManager(
-        contentPlayback: any,
-        adsRenderingSettings: AdsRenderingSettings,
+        contentPlayback: {
+          currentTime: number;
+          duration: number;
+        },
+        adsRenderingSettings?: AdsRenderingSettings,
       ): AdsManager;
       /**
        * @returns During ads load request it is possible to provide an object that is available once the ads load is complete. One possible use case: relate ads response to a specific request and use user request content object as a key for identifying the response.
