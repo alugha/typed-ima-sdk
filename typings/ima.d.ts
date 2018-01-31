@@ -597,10 +597,27 @@ declare namespace google {
      */
     class AdsLoader {
       /**
-       *
        * @param container The display container for ads.
        */
       constructor(container: AdDisplayContainer);
+      /**
+       * Adds an event listener for the specified type.
+       * @param type The event type to listen to
+       * @param listener The function to call when the event is triggered
+       */
+      public addEventListener(
+        type: AdsManagerLoadedEvent.Type,
+        listener: (event: AdsManagerLoadedEvent) => void,
+      ): void;
+      /**
+       * Adds an event listener for the specified type.
+       * @param type The event type to listen to
+       * @param listener The function to call when the event is triggered
+       */
+      public addEventListener(
+        type: AdErrorEvent.Type,
+        listener: (event: AdErrorEvent) => void,
+      ): void;
       /**
        * Signals to the SDK that the content is finished. This will allow the SDK to play post-roll ads, if any are loaded via ad rules.
        */
@@ -626,6 +643,24 @@ declare namespace google {
      * This class is responsible for playing ads.
      */
     interface AdsManager {
+      /**
+       * Adds an event listener for the specified type.
+       * @param type The event type to listen to
+       * @param listener The function to call when the event is triggered
+       */
+      addEventListener(
+        type: AdEvent.Type,
+        listener: (event: AdEvent) => void,
+      ): void;
+      /**
+       * Adds an event listener for the specified type.
+       * @param type The event type to listen to
+       * @param listener The function to call when the event is triggered
+       */
+      addEventListener(
+        type: AdErrorEvent.Type,
+        listener: (event: AdErrorEvent) => void,
+      ): void;
       /**
        * Collapse the current ad. This is no-op for HTML5 SDK.
        */
