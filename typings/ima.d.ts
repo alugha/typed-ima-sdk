@@ -196,7 +196,7 @@ declare namespace google {
     /**
      * AdError surfaces information to the user about whether a failure occurred during ad loading or playing. The errorType accessor provides information about whether the error occurred during ad loading or ad playing.
      */
-    class AdError {
+    class AdError extends Error {
       /**
        * Constructs the ad error based on the error data.
        * @param data The ad error message data.
