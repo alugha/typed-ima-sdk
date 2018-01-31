@@ -1,4 +1,9 @@
 declare namespace google {
+  /**
+   * The Google IMA SDK for HTML5 V3 allows developers to request and track VAST ads in a HTML5 video environment. For platform compatibility information and a detailed list of the video ad features supported by each of the IMA SDKs, see Support and Compatibility.
+   *
+   * Download the code samples to assist with implementing the IMA HTML5 SDK.
+   */
   namespace ima {
     /**
      * An ad class that's extended by classes representing different ad types.
