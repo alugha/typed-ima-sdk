@@ -1,7 +1,7 @@
 # Typed Google IMA SDK
 
 A library without runtime dependencies for asynchronously loading the Google IMA
-SDK, including TypoScript type definitions for the SDK itself.
+SDK, including TypeScript type definitions for the SDK itself.
 
 For information on the Google IMA SDK itself, please visit
 [Google's official documentation](https://developers.google.com/interactive-media-ads/docs/sdks/html5/).
@@ -14,7 +14,7 @@ For information on the Google IMA SDK itself, please visit
 
 ### TypeScript with async loading
 
-Using promises and CommonJS modules:
+With promises and CommonJS modules:
 
 ```typescript
 const { loadImaSdk } = require("@alugha/ima");
@@ -32,7 +32,7 @@ loadImaSdk()
   });
 ```
 
-Using `async` and `await` and ES2015 modules:
+With `async` / `await` and ES2015 modules:
 
 ```typescript
 import { loadImaSdk } from "@alugha/ima";
