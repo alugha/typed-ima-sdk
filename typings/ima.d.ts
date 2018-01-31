@@ -415,6 +415,8 @@ declare namespace google {
          */
         AD_ERROR,
       }
+
+      type Listener = (event: AdErrorEvent) => void;
     }
 
     /**
@@ -535,6 +537,8 @@ declare namespace google {
          */
         VOLUME_MUTED,
       }
+
+      type Listener = (event: AdEvent) => void;
     }
 
     /**
@@ -602,21 +606,47 @@ declare namespace google {
       constructor(container: AdDisplayContainer);
       /**
        * Adds an event listener for the specified type.
-       * @param type The event type to listen to
-       * @param listener The function to call when the event is triggered
+       * @param type The event type to listen to.
+       * @param listener The function to call when the event is triggered.
+       * @param useCapture Optional
        */
       public addEventListener(
         type: AdsManagerLoadedEvent.Type,
-        listener: (event: AdsManagerLoadedEvent) => void,
+        listener: AdsManagerLoadedEvent.Listener,
+        useCapture?: boolean,
       ): void;
       /**
        * Adds an event listener for the specified type.
-       * @param type The event type to listen to
-       * @param listener The function to call when the event is triggered
+       * @param type The event type to listen to.
+       * @param listener The function to call when the event is triggered.
+       * @param useCapture Optional
        */
       public addEventListener(
         type: AdErrorEvent.Type,
-        listener: (event: AdErrorEvent) => void,
+        listener: AdErrorEvent.Listener,
+        useCapture?: boolean,
+      ): void;
+      /**
+       * Removes an event listener for the specified type.
+       * @param type The event type for which to remove an event listener.
+       * @param listener The function of the event handler to remove from the event target.
+       * @param useCapture Optional
+       */
+      public removeEventListener(
+        type: AdsManagerLoadedEvent.Type,
+        listener: AdsManagerLoadedEvent.Listener,
+        useCapture?: boolean,
+      ): void;
+      /**
+       * Removes an event listener for the specified type.
+       * @param type The event type for which to remove an event listener.
+       * @param listener The function of the event handler to remove from the event target.
+       * @param useCapture Optional
+       */
+      public removeEventListener(
+        type: AdErrorEvent.Type,
+        listener: AdErrorEvent.Listener,
+        useCapture?: boolean,
       ): void;
       /**
        * Signals to the SDK that the content is finished. This will allow the SDK to play post-roll ads, if any are loaded via ad rules.
@@ -647,19 +677,45 @@ declare namespace google {
        * Adds an event listener for the specified type.
        * @param type The event type to listen to
        * @param listener The function to call when the event is triggered
+       * @param useCapture Optional
        */
       addEventListener(
         type: AdEvent.Type,
-        listener: (event: AdEvent) => void,
+        listener: AdEvent.Listener,
+        useCapture?: boolean,
       ): void;
       /**
        * Adds an event listener for the specified type.
        * @param type The event type to listen to
        * @param listener The function to call when the event is triggered
+       * @param useCapture Optional
        */
       addEventListener(
         type: AdErrorEvent.Type,
-        listener: (event: AdErrorEvent) => void,
+        listener: AdErrorEvent.Listener,
+        useCapture?: boolean,
+      ): void;
+      /**
+       * Removes an event listener for the specified type.
+       * @param type The event type for which to remove an event listener.
+       * @param listener The function of the event handler to remove from the event target.
+       * @param useCapture Optional
+       */
+      removeEventListener(
+        type: AdEvent.Type,
+        listener: AdEvent.Listener,
+        useCapture?: boolean,
+      ): void;
+      /**
+       * Removes an event listener for the specified type.
+       * @param type The event type for which to remove an event listener.
+       * @param listener The function of the event handler to remove from the event target.
+       * @param useCapture Optional
+       */
+      removeEventListener(
+        type: AdErrorEvent.Type,
+        listener: AdErrorEvent.Listener,
+        useCapture?: boolean,
       ): void;
       /**
        * Collapse the current ad. This is no-op for HTML5 SDK.
@@ -794,6 +850,8 @@ declare namespace google {
          */
         ADS_MANAGER_LOADED,
       }
+
+      type Listener = (event: AdsManagerLoadedEvent) => void;
     }
 
     /**
