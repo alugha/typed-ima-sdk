@@ -813,7 +813,7 @@ declare namespace google {
        * @param adsRenderingSettings The updated ads rendering settings.
        */
       updateAdsRenderingSettings(
-        adsRenderingSettings: AdsRenderingSettings,
+        adsRenderingSettings: Partial<AdsRenderingSettings>,
       ): void;
     }
 
@@ -832,7 +832,7 @@ declare namespace google {
           currentTime: number;
           duration: number;
         },
-        adsRenderingSettings?: AdsRenderingSettings,
+        adsRenderingSettings?: Partial<AdsRenderingSettings>,
       ): AdsManager;
       /**
        * @returns During ads load request it is possible to provide an object that is available once the ads load is complete. One possible use case: relate ads response to a specific request and use user request content object as a key for identifying the response.
