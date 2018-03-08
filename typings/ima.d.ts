@@ -1273,5 +1273,10 @@ declare namespace google {
      * A string containing the full version of the SDK.
      */
     const VERSION: string;
+
+    /**
+     * Settings for the Google IMA SDK.
+     */
+    const settings: ImaSdkSettings;
   }
 }
