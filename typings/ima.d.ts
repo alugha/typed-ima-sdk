@@ -445,9 +445,17 @@ declare namespace google {
          */
         AD_BREAK_READY,
         /**
+         * Fired when the ad has stalled playback to buffer.
+         */
+        AD_BUFFERING,
+        /**
          * Fired when an ads list is loaded.
          */
         AD_METADATA,
+        /**
+         * Fired when the ad's current time value changes. Calling getAdData() on this event will return an AdProgressData object.
+         */
+        AD_PROGRESS,
         /**
          * Fired when the ads manager is done playing all the ads.
          */
