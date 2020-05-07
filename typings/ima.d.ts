@@ -991,6 +991,11 @@ declare namespace google {
        * @param muted Whether the ad will be played while muted.
        */
       public setAdWillPlayMuted(muted: boolean): void;
+      /**
+       * Notifies the SDK whether the player intends to continuously play the content videos one after another similar to TV broadcast. Changing this setting will have no impact on the ad playback, but will send the appropriate signal in this ad request to allow buyers to bid on the type of ad inventory.
+       * @param continuousPlayback Whether the content video is played one after another continuously.
+       */
+      public setContinuousPlayback(continuousPlayback: boolean): void;
     }
 
     /**
