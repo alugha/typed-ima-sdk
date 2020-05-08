@@ -240,91 +240,91 @@ declare namespace google {
         /**
          * There was a problem requesting ads from the server. VAST error code 1012
          */
-        ADS_REQUEST_NETWORK_ERROR,
+        ADS_REQUEST_NETWORK_ERROR = 1012,
         /**
          * There was an error with asset fallback. VAST error code 1021
          */
-        ASSET_FALLBACK_FAILED,
+        ASSET_FALLBACK_FAILED = 1021,
         /**
          * The browser prevented playback initiated without user interaction. VAST error code 1205
          */
-        AUTOPLAY_DISALLOWED,
+        AUTOPLAY_DISALLOWED = 1205,
         /**
          * A companion ad failed to load or render. VAST error code 603
          */
-        COMPANION_AD_LOADING_FAILED,
+        COMPANION_AD_LOADING_FAILED = 603,
         /**
          * Unable to display one or more required companions. The master ad is discarded since the required companions could not be displayed. VAST error code 602
          */
-        COMPANION_REQUIRED_ERROR,
+        COMPANION_REQUIRED_ERROR = 602,
         /**
          * There was a problem requesting ads from the server. VAST error code 1005
          */
-        FAILED_TO_REQUEST_ADS,
+        FAILED_TO_REQUEST_ADS = 1005,
         /**
          * The ad tag url specified was invalid. It needs to be properly encoded. VAST error code 1013
          */
-        INVALID_AD_TAG,
+        INVALID_AD_TAG = 1013,
         /**
          * An invalid AdX extension was found. VAST error code 1105
          */
-        INVALID_ADX_EXTENSION,
+        INVALID_ADX_EXTENSION = 1105,
         /**
          * Invalid arguments were provided to SDK methods. VAST error code 1101
          */
-        INVALID_ARGUMENTS,
+        INVALID_ARGUMENTS = 1101,
         /**
          * Unable to display NonLinear ad because creative dimensions do not align with creative display area (i.e. creative dimension too large). VAST error code 501
          */
-        NONLINEAR_DIMENSIONS_ERROR,
+        NONLINEAR_DIMENSIONS_ERROR = 501,
         /**
          * An overlay ad failed to load. VAST error code 502
          */
-        OVERLAY_AD_LOADING_FAILED,
+        OVERLAY_AD_LOADING_FAILED = 502,
         /**
          * An overlay ad failed to render. VAST error code 500
          */
-        OVERLAY_AD_PLAYING_FAILED,
+        OVERLAY_AD_PLAYING_FAILED = 500,
         /**
          * There was an error with stream initialization during server side ad insertion. VAST error code 1020
          */
-        STREAM_INITIALIZATION_FAILED,
+        STREAM_INITIALIZATION_FAILED = 1020,
         /**
          * The ad response was not understood and cannot be parsed. VAST error code 1010
          */
-        UNKNOWN_AD_RESPONSE,
+        UNKNOWN_AD_RESPONSE = 1010,
         /**
          * An unexpected error occurred and the cause is not known. Refer to the inner error for more information. VAST error code 900
          */
-        UNKNOWN_ERROR,
+        UNKNOWN_ERROR = 900,
         /**
          * Locale specified for the SDK is not supported. VAST error code 1011
          */
-        UNSUPPORTED_LOCALE,
+        UNSUPPORTED_LOCALE = 1011,
         /**
          * No assets were found in the VAST ad response. VAST error code 1007
          */
-        VAST_ASSET_NOT_FOUND,
+        VAST_ASSET_NOT_FOUND = 1007,
         /**
          * Empty VAST response. VAST error code 1009
          */
-        VAST_EMPTY_RESPONSE,
+        VAST_EMPTY_RESPONSE = 1009,
         /**
          * Assets were found in the VAST ad response for linear ad, but none of them matched the video player's capabilities. VAST error code 403
          */
-        VAST_LINEAR_ASSET_MISMATCH,
+        VAST_LINEAR_ASSET_MISMATCH = 403,
         /**
          * The VAST URI provided, or a VAST URI provided in a subsequent wrapper element, was either unavailable or reached a timeout, as defined by the video player. The timeout is 5 seconds for initial VAST requests and each subsequent wrapper. VAST error code 301
          */
-        VAST_LOAD_TIMEOUT,
+        VAST_LOAD_TIMEOUT = 301,
         /**
          * The ad response was not recognized as a valid VAST ad. VAST error code 100
          */
-        VAST_MALFORMED_RESPONSE,
+        VAST_MALFORMED_RESPONSE = 100,
         /**
          * Failed to load media assets from a VAST response. The default timeout for media loading is 8 seconds. VAST error code 402
          */
-        VAST_MEDIA_LOAD_TIMEOUT,
+        VAST_MEDIA_LOAD_TIMEOUT = 402,
         /**
          * No Ads VAST response after one or more wrappers. VAST error code 303
          */
@@ -382,11 +382,11 @@ declare namespace google {
         /**
          * Indicates that the error was encountered when the ad was being loaded. Possible causes: there was no response from the ad server, malformed ad response was returned, or ad request parameters failed to pass validation.
          */
-        AD_LOAD,
+        AD_LOAD = 'adLoadError',
         /**
          * Indicates that the error was encountered after the ad loaded, during ad play. Possible causes: ad assets could not be loaded, etc.
          */
-        AD_PLAY,
+        AD_PLAY = 'adPlayError',
       }
     }
 
@@ -413,7 +413,7 @@ declare namespace google {
         /**
          * Fired when an error occurred while the ad was loading or playing.
          */
-        AD_ERROR,
+        AD_ERROR = 'adError',
       }
 
       type Listener = (event: AdErrorEvent) => void;
@@ -856,7 +856,7 @@ declare namespace google {
         /**
          * Fired when the ads have been loaded and an AdsManager is available.
          */
-        ADS_MANAGER_LOADED,
+        ADS_MANAGER_LOADED = 'adsManagerLoaded',
       }
 
       type Listener = (event: AdsManagerLoadedEvent) => void;
