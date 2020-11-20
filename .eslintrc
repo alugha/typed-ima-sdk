@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "import",
+    "prettier"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "import/extensions": [
+      ".ts",
+      ".tsx"
+    ]
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "serviceworker": true,
+    "node": true
+  },
+  "rules": {
+    "prefer-const": "error",
+    "import/order": "error",
+    "prettier/prettier": "error"
+  }
+}

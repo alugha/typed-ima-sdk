@@ -1,4 +1,6 @@
-declare namespace google {
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export namespace google {
   /**
    * The Google IMA SDK for HTML5 V3 allows developers to request and track VAST ads in a HTML5 video environment. For platform compatibility information and a detailed list of the video ad features supported by each of the IMA SDKs, see Support and Compatibility.
    *
@@ -44,7 +46,7 @@ declare namespace google {
       getCompanionAds(
         adSlotWidth: number,
         adSlotHeight: number,
-        settings?: CompanionAdSelectionSettings,
+        settings?: CompanionAdSelectionSettings
       ): CompanionAd[];
       /**
        * Returns the content type of the currently selected creative, or empty string if no creative is selected or the content type is unavailable. For linear ads, the content type is only going to be available after the START event, when the media file is selected.
@@ -181,7 +183,7 @@ declare namespace google {
       constructor(
         containerElement: HTMLElement,
         videoElement?: HTMLVideoElement,
-        clickTrackingElement?: HTMLElement,
+        clickTrackingElement?: HTMLElement
       );
       /**
        * Destroys internal state and previously created DOM elements. The IMA SDK will be unloaded and no further calls to any APIs should be made.
@@ -621,7 +623,7 @@ declare namespace google {
       public addEventListener(
         type: AdsManagerLoadedEvent.Type,
         listener: AdsManagerLoadedEvent.Listener,
-        useCapture?: boolean,
+        useCapture?: boolean
       ): void;
       /**
        * Adds an event listener for the specified type.
@@ -632,7 +634,7 @@ declare namespace google {
       public addEventListener(
         type: AdErrorEvent.Type,
         listener: AdErrorEvent.Listener,
-        useCapture?: boolean,
+        useCapture?: boolean
       ): void;
       /**
        * Removes an event listener for the specified type.
@@ -643,7 +645,7 @@ declare namespace google {
       public removeEventListener(
         type: AdsManagerLoadedEvent.Type,
         listener: AdsManagerLoadedEvent.Listener,
-        useCapture?: boolean,
+        useCapture?: boolean
       ): void;
       /**
        * Removes an event listener for the specified type.
@@ -654,7 +656,7 @@ declare namespace google {
       public removeEventListener(
         type: AdErrorEvent.Type,
         listener: AdErrorEvent.Listener,
-        useCapture?: boolean,
+        useCapture?: boolean
       ): void;
       /**
        * Signals to the SDK that the content is finished. This will allow the SDK to play post-roll ads, if any are loaded via ad rules.
@@ -690,7 +692,7 @@ declare namespace google {
       addEventListener(
         type: AdEvent.Type,
         listener: AdEvent.Listener,
-        useCapture?: boolean,
+        useCapture?: boolean
       ): void;
       /**
        * Adds an event listener for the specified type.
@@ -701,7 +703,7 @@ declare namespace google {
       addEventListener(
         type: AdErrorEvent.Type,
         listener: AdErrorEvent.Listener,
-        useCapture?: boolean,
+        useCapture?: boolean
       ): void;
       /**
        * Removes an event listener for the specified type.
@@ -712,7 +714,7 @@ declare namespace google {
       removeEventListener(
         type: AdEvent.Type,
         listener: AdEvent.Listener,
-        useCapture?: boolean,
+        useCapture?: boolean
       ): void;
       /**
        * Removes an event listener for the specified type.
@@ -723,7 +725,7 @@ declare namespace google {
       removeEventListener(
         type: AdErrorEvent.Type,
         listener: AdErrorEvent.Listener,
-        useCapture?: boolean,
+        useCapture?: boolean
       ): void;
       /**
        * Collapse the current ad. This is no-op for HTML5 SDK.
@@ -772,7 +774,7 @@ declare namespace google {
         width: number,
         height: number,
         viewMode: ViewMode,
-        videoElement?: HTMLVideoElement,
+        videoElement?: HTMLVideoElement
       ): void;
       /**
        * Returns true if a custom click tracking element is being used for click tracking on the current ad. Custom click tracking is only used when an optional click tracking element is provided to the AdDisplayContainer, custom playback is used, and the current ad is not an AdSense/AdX ad.
@@ -821,7 +823,7 @@ declare namespace google {
        * @param adsRenderingSettings The updated ads rendering settings.
        */
       updateAdsRenderingSettings(
-        adsRenderingSettings: Partial<AdsRenderingSettings>,
+        adsRenderingSettings: Partial<AdsRenderingSettings>
       ): void;
     }
 
@@ -840,7 +842,7 @@ declare namespace google {
           currentTime: number;
           duration: number;
         },
-        adsRenderingSettings?: Partial<AdsRenderingSettings>,
+        adsRenderingSettings?: Partial<AdsRenderingSettings>
       ): AdsManager;
       /**
        * @returns During ads load request it is possible to provide an object that is available once the ads load is complete. One possible use case: relate ads response to a specific request and use user request content object as a key for identifying the response.
@@ -1166,7 +1168,7 @@ declare namespace google {
        * @param mode The desired companion backfill mode.
        */
       public setCompanionBackfill(
-        mode: ImaSdkSettings.CompanionBackfillMode,
+        mode: ImaSdkSettings.CompanionBackfillMode
       ): void;
       /**
        * Sets whether to disable custom playback on iOS 10+ browsers. If true, ads will play inline if the content video is inline. This enables TrueView skippable ads. However, the ad will stay inline and not support iOS's native fullscreen. When false, ads will play in the same player as your content. The value set here when an AdDisplayContainer is created is used for the lifetime of the container. The default value is false.

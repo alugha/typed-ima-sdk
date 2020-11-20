@@ -17,6 +17,6 @@
     "declaration": true,
     "declarationDir": "./lib/typings"
   },
-  "include": ["./typings/**/*", "./src/**/*"],
+  "include": ["./src/**/*"],
   "exclude": ["./node_modules", "./lib"]
 }

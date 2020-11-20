@@ -17,7 +17,7 @@ For information on the Google IMA SDK itself, please visit
 With promises and CommonJS modules:
 
 ```typescript
-const { loadImaSdk } = require("@alugha/ima");
+const { loadImaSdk, google } = require("@alugha/ima");
 
 loadImaSdk()
   .then(ima => {
@@ -35,7 +35,7 @@ loadImaSdk()
 With `async` / `await` and ES2015 modules:
 
 ```typescript
-import { loadImaSdk } from "@alugha/ima";
+import { loadImaSdk, google } from "@alugha/ima";
 
 const example = async () => {
   try {

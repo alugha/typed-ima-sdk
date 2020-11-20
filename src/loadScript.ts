@@ -1,8 +1,8 @@
 // Asynchronous loader for external scripts
 
-const loadScript = (src: string) =>
+const loadScript = (src: string): Promise<Event> =>
   new Promise((resolve, reject) => {
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.async = true;
     script.src = src;
     script.onload = resolve;
