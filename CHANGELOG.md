@@ -1,3 +1,8 @@
+## 2.0.2 (unreleased)
+
+Fixes:
+- Set correct values for enum types (fixes #1)
+
 ## 2.0.1 (2020-11-20)
 
 Fixes:

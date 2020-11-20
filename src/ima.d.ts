@@ -330,51 +330,51 @@ export namespace google {
         /**
          * No Ads VAST response after one or more wrappers. VAST error code 303
          */
-        VAST_NO_ADS_AFTER_WRAPPER,
+        VAST_NO_ADS_AFTER_WRAPPER = 303,
         /**
          * Assets were found in the VAST ad response for nonlinear ad, but none of them matched the video player's capabilities. VAST error code 503
          */
-        VAST_NONLINEAR_ASSET_MISMATCH,
+        VAST_NONLINEAR_ASSET_MISMATCH = 503,
         /**
          * Problem displaying MediaFile. Currently used if video playback is stopped due to poor playback quality. VAST error code 405
          */
-        VAST_PROBLEM_DISPLAYING_MEDIA_FILE,
+        VAST_PROBLEM_DISPLAYING_MEDIA_FILE = 405,
         /**
          * VAST schema validation error. VAST error code 101
          */
-        VAST_SCHEMA_VALIDATION_ERROR,
+        VAST_SCHEMA_VALIDATION_ERROR = 101,
         /**
          * The maximum number of VAST wrapper redirects has been reached. VAST error code 302
          */
-        VAST_TOO_MANY_REDIRECTS,
+        VAST_TOO_MANY_REDIRECTS = 302,
         /**
          * Trafficking error. Video player received an ad type that it was not expecting and/or cannot display. VAST error code 200
          */
-        VAST_TRAFFICKING_ERROR,
+        VAST_TRAFFICKING_ERROR = 200,
         /**
          * VAST duration is different from the actual media file duration. VAST error code 202
          */
-        VAST_UNEXPECTED_DURATION_ERROR,
+        VAST_UNEXPECTED_DURATION_ERROR = 202,
         /**
          * Ad linearity is different from what the video player is expecting. VAST error code 201
          */
-        VAST_UNEXPECTED_LINEARITY,
+        VAST_UNEXPECTED_LINEARITY = 201,
         /**
          * The ad response contained an unsupported VAST version. VAST error code 102
          */
-        VAST_UNSUPPORTED_VERSION,
+        VAST_UNSUPPORTED_VERSION = 102,
         /**
          * General VAST wrapper error. VAST error code 300
          */
-        VAST_WRAPPER_ERROR,
+        VAST_WRAPPER_ERROR = 300,
         /**
          * There was an error playing the video ad. VAST error code 400
          */
-        VIDEO_PLAY_ERROR,
+        VIDEO_PLAY_ERROR = 400,
         /**
          * A VPAID error occurred. Refer to the inner error for more information. VAST error code 901
          */
-        VPAID_ERROR,
+        VPAID_ERROR = 901,
       }
 
       /**
@@ -384,11 +384,11 @@ export namespace google {
         /**
          * Indicates that the error was encountered when the ad was being loaded. Possible causes: there was no response from the ad server, malformed ad response was returned, or ad request parameters failed to pass validation.
          */
-        AD_LOAD = 'adLoadError',
+        AD_LOAD = "adLoadError",
         /**
          * Indicates that the error was encountered after the ad loaded, during ad play. Possible causes: ad assets could not be loaded, etc.
          */
-        AD_PLAY = 'adPlayError',
+        AD_PLAY = "adPlayError",
       }
     }
 
@@ -415,7 +415,7 @@ export namespace google {
         /**
          * Fired when an error occurred while the ad was loading or playing.
          */
-        AD_ERROR = 'adError',
+        AD_ERROR = "adError",
       }
 
       type Listener = (event: AdErrorEvent) => void;
@@ -445,107 +445,107 @@ export namespace google {
         /**
          * Fired when an ad rule or a VMAP ad break would have played if autoPlayAdBreaks is false.
          */
-        AD_BREAK_READY,
+        AD_BREAK_READY = "adBreakReady",
         /**
          * Fired when the ad has stalled playback to buffer.
          */
-        AD_BUFFERING,
+        AD_BUFFERING = "adBuffering",
         /**
          * Fired when an ads list is loaded.
          */
-        AD_METADATA,
+        AD_METADATA = "adMetadata",
         /**
          * Fired when the ad's current time value changes. Calling getAdData() on this event will return an AdProgressData object.
          */
-        AD_PROGRESS,
+        AD_PROGRESS = "adProgress",
         /**
          * Fired when the ads manager is done playing all the ads.
          */
-        ALL_ADS_COMPLETED,
+        ALL_ADS_COMPLETED = "allAdsCompleted",
         /**
          * Fired when the ad is clicked.
          */
-        CLICK,
+        CLICK = "click",
         /**
          * Fired when the ad completes playing.
          */
-        COMPLETE,
+        COMPLETE = "complete",
         /**
          * Fired when content should be paused. This usually happens right before an ad is about to cover the content.
          */
-        CONTENT_PAUSE_REQUESTED,
+        CONTENT_PAUSE_REQUESTED = "contentPauseRequested",
         /**
          * Fired when content should be resumed. This usually happens when an ad finishes or collapses.
          */
-        CONTENT_RESUME_REQUESTED,
+        CONTENT_RESUME_REQUESTED = "contentResumeRequested",
         /**
          * Fired when the ad's duration changes.
          */
-        DURATION_CHANGE,
+        DURATION_CHANGE = "durationChange",
         /**
          * Fired when the ad playhead crosses first quartile.
          */
-        FIRST_QUARTILE,
+        FIRST_QUARTILE = "firstQuartile",
         /**
          * Fired when the impression URL has been pinged.
          */
-        IMPRESSION,
+        IMPRESSION = "impression",
         /**
          * Fired when an ad triggers the interaction callback. Ad interactions contain an interaction ID string in the ad data.
          */
-        INTERACTION,
+        INTERACTION = "interaction",
         /**
          * Fired when the displayed ad changes from linear to nonlinear, or vice versa.
          */
-        LINEAR_CHANGED,
+        LINEAR_CHANGED = "linearChanged",
         /**
          * Fired when ad data is available.
          */
-        LOADED,
+        LOADED = "loaded",
         /**
          * Fired when a non-fatal error is encountered. The user need not take any action since the SDK will continue with the same or next ad playback depending on the error situation.
          */
-        LOG,
+        LOG = "log",
         /**
          * Fired when the ad playhead crosses midpoint.
          */
-        MIDPOINT,
+        MIDPOINT = "midpoint",
         /**
          * Fired when the ad is paused.
          */
-        PAUSED,
+        PAUSED = "pause",
         /**
          * Fired when the ad is resumed.
          */
-        RESUMED,
+        RESUMED = "resume",
         /**
          * Fired when the displayed ads skippable state is changed.
          */
-        SKIPPABLE_STATE_CHANGED,
+        SKIPPABLE_STATE_CHANGED = "skippableStateChanged",
         /**
          * Fired when the ad is skipped by the user.
          */
-        SKIPPED,
+        SKIPPED = "skip",
         /**
          * Fired when the ad starts playing.
          */
-        STARTED,
+        STARTED = "start",
         /**
          * Fired when the ad playhead crosses third quartile.
          */
-        THIRD_QUARTILE,
+        THIRD_QUARTILE = "thirdQuartile",
         /**
          * Fired when the ad is closed by the user.
          */
-        USER_CLOSE,
+        USER_CLOSE = "userClose",
         /**
          * Fired when the ad volume has changed.
          */
-        VOLUME_CHANGED,
+        VOLUME_CHANGED = "volumeChange",
         /**
          * Fired when the ad volume has been muted.
          */
-        VOLUME_MUTED,
+        VOLUME_MUTED = "mute",
       }
 
       type Listener = (event: AdEvent) => void;
@@ -858,7 +858,7 @@ export namespace google {
         /**
          * Fired when the ads have been loaded and an AdsManager is available.
          */
-        ADS_MANAGER_LOADED = 'adsManagerLoaded',
+        ADS_MANAGER_LOADED = "adsManagerLoaded",
       }
 
       type Listener = (event: AdsManagerLoadedEvent) => void;
@@ -1061,15 +1061,15 @@ export namespace google {
         /**
          * Specifies all creative types.
          */
-        ALL,
+        ALL = "All",
         /**
          * Specifies Flash creatives.
          */
-        FLASH,
+        FLASH = "Flash",
         /**
          * Specifies image creatives (such as JPEG, PNG, GIF, etc).
          */
-        IMAGE,
+        IMAGE = "Image",
       }
 
       /**
@@ -1079,19 +1079,19 @@ export namespace google {
         /**
          * Specifies that the resource can be any type of resource.
          */
-        ALL,
+        ALL = "All",
         /**
          * Specifies that the resource should be an HTML snippet.
          */
-        HTML,
+        HTML = "Html",
         /**
          * Specifies that the resource should be a URL that should be used as the source of an iframe.
          */
-        IFRAME,
+        IFRAME = "IFrame",
         /**
          * Specifies that the resource should be a static file (usually the URL of an image of SWF).
          */
-        STATIC,
+        STATIC = "Static",
       }
 
       /**
@@ -1101,15 +1101,15 @@ export namespace google {
         /**
          * Specifies that size should be ignored when choosing companions.
          */
-        IGNORE,
+        IGNORE = "IgnoreSize",
         /**
          * Specifies that only companions that match the size of the companion ad slot exactly should be chosen.
          */
-        SELECT_EXACT_MATCH,
+        SELECT_EXACT_MATCH = "SelectExactMatch",
         /**
          * Specifies that any companion close to the size of the companion ad slot should be chosen.
          */
-        SELECT_NEAR_MATCH,
+        SELECT_NEAR_MATCH = "SelectNearMatch",
       }
     }
 
@@ -1230,11 +1230,11 @@ export namespace google {
         /**
          * If the value is ALWAYS, companion backfill will be attempted in all situations, even when there is no master ad returned.
          */
-        ALWAYS,
+        ALWAYS = "always",
         /**
          * If the value is ON_MASTER_AD, companion backfill will be attempted if there is a master ad with fewer companions than there are companion slots. The missing companions will be backfilled.
          */
-        ON_MASTER_AD,
+        ON_MASTER_AD = "on_master_ad",
       }
 
       /**
@@ -1244,15 +1244,15 @@ export namespace google {
         /**
          * VPAID ads will not play and an error will be returned.
          */
-        DISABLED,
+        DISABLED = 0,
         /**
          * VPAID ads are enabled using a cross domain iframe. The VPAID ad cannot access the site. VPAID ads that depend on friendly iframe access may error. This is the default.
          */
-        ENABLED,
+        ENABLED = 1,
         /**
          * VPAID ads are enabled using a friendly iframe. This allows the ad access to the site via JavaScript.
          */
-        INSECURE,
+        INSECURE = 2,
       }
     }
 
@@ -1263,11 +1263,11 @@ export namespace google {
       /**
        * Displays the "Ad" text in the ad UI. Must be present to show the countdown timer.
        */
-      AD_ATTRIBUTION,
+      AD_ATTRIBUTION = "adAttribution",
       /**
        * Ad attribution is required for a countdown timer to be displayed. Both UiElements.COUNTDOWN and UiElements.AD_ATTRIBUTION must be present in AdsRenderingSettings.uiElements.
        */
-      COUNTDOWN,
+      COUNTDOWN = "countdown",
     }
 
     /**
@@ -1277,11 +1277,11 @@ export namespace google {
       /**
        * Fullscreen ad view mode. Indicates to the ads manager that the publisher considers the current AdDisplayContainer arrangement as fullscreen (i.e. simulated fullscreen). This does not cause the ads manager to enter fullscreen.
        */
-      FULLSCREEN,
+      FULLSCREEN = "fullscreen",
       /**
        * Normal ad view mode.
        */
-      NORMAL,
+      NORMAL = "normal",
     }
 
     /**
