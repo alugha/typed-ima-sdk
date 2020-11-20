@@ -12,3 +12,16 @@ Technical changes:
 - Updated from TypeScript `2.6` to `4.1`
 - Updated from Prettier `1.10` to `2.2`
 - Migrated from TSLint to ESLint
+
+## v1.2.0 (2020-05-08)
+
+Changes:
+- @bechtold: Added new AdEvent types (#4)
+- @klipstein: Add missing AdsRequest.setContinuousPlayback method (#7)
+
+## v1.1.0 (2018-01-31)
+
+Changes:
+
+- Update method `addEventListener` for both AdsLoader and AdsManager to include an optional third parameter called `useCapture` of type `boolean`
+- Add method `removeEventListener(type, listener, useCapture?)` to AdsLoader and AdsManager
