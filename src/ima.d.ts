@@ -1042,7 +1042,7 @@ export namespace google {
       /**
        * The near fit percent set by the user.
        */
-      public nearMatchParent: number;
+      public nearMatchPercent: number;
       /**
        * Resource type setting set by the user.
        */
