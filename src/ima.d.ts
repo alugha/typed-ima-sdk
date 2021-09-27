@@ -977,6 +977,12 @@ export namespace google {
        */
       public nonLinearAdSlotWidth: number;
       /**
+       * Specifies the full url of the page that will be included in the Google ad request for targeting purposes. The url needs to be a valid url. If specified, this value will be used for the [PAGEURL] VAST macro.
+       * 
+       * This parameter is optional.
+       */
+      public pageUrl?: string;
+      /**
        * Override for default VAST load timeout in milliseconds for a single wrapper. The default timeout is 5000ms.
        *
        * This parameter is optional.
