@@ -7,8 +7,7 @@ interface ImaWindow {
   };
 }
 
-const imaSdkProtocol = location.protocol === "http:" ? "http:" : "https:";
-const imaSdkSrc = imaSdkProtocol + "//imasdk.googleapis.com/js/sdkloader/ima3.js";
+const imaSdkSrc = "https://imasdk.googleapis.com/js/sdkloader/ima3.js";
 let pendingPromise: Promise<typeof google.ima> | null = null;
 
 const promiseFinished = () => {
