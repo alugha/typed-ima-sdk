@@ -15,7 +15,7 @@ const promiseFinished = () => {
 };
 
 const loadImaSdk = (): Promise<typeof google.ima> => {
-  const w = (window as unknown) as ImaWindow;
+  const w = window as unknown as ImaWindow;
   if (w.google && w.google.ima) {
     return Promise.resolve(w.google.ima);
   }
