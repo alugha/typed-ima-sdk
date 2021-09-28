@@ -1,3 +1,22 @@
+## v2.1.0 (2021-09-28)
+
+Changes:
+- @joeflateau: Add `pageUrl` property to AdsRequest (#19)
+
+Fixes:
+- @joeflateau: Loading of IMA SDK in non-http environments (#16 / #18)
+
+Technical changes:
+- Updated from TypeScript `4.1` to `4.4`
+- Updated from ESLint `7.13` to `7.32`
+- Updated from Prettier `2.2` to `2.4`
+- Remove TSLint
+
+## v2.0.3 (2021-05-01)
+
+Fixes:
+- @Achavesm: Spelling mistake in `nearMathPercent` (#11)
+
 ## v2.0.2 (2020-11-20)
 
 Fixes:
