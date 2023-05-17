@@ -1,6 +1,6 @@
 {
   "name": "@alugha/ima",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "A library for asynchronously loading the Google IMA SDK with static typing for the SDK",
   "license": "MIT",
   "author": "Niklas Korz <nk@alugha.com>",

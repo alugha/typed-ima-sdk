@@ -1,3 +1,9 @@
+## v2.2.1 (2023-05-17)
+
+Fixes:
+- Remove [`crossorigin="anonymous"`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) as `cross-origin-resource-policy
+	cross-origin` header is already set for [ima3.js](https://imasdk.googleapis.com/js/sdkloader/ima3.js)
+
 ## v2.2.0 (2023-05-17)
 
 Changes:
