@@ -7,6 +7,7 @@ const loadScript = (src: string): Promise<Event> =>
     script.src = src;
     script.onload = resolve;
     script.onerror = reject;
+    script.crossOrigin = "anonymous";
     document.body.appendChild(script);
   });
 

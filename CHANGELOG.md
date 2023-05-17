@@ -1,3 +1,14 @@
+## v2.2.0 (2023-05-17)
+
+Changes:
+- Target ES2015 instead of ES5
+
+Fixes:
+- Add [`crossorigin="anonymous"`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin) to script tags for compatibility with [COEP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)
+
+Technical changes:
+- Updated from TypeScript `4.4` to `5.0`
+
 ## v2.1.0 (2021-09-28)
 
 Changes:
