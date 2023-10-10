@@ -426,6 +426,10 @@ export namespace google {
      */
     class AdEvent {
       /**
+       * Types of AdEvents
+       */
+      public type: AdEvent.Type;
+      /**
        * Get the current ad that is playing or just played.
        * @returns The ad associated with the event, or null if there is no relevant ad.
        */
